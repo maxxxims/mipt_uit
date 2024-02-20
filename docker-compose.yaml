@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  api_service:
+    container_name:  kw_api
+    build:  kw
+    command: python kw/server.py
+    ports:
+      - "8000:7000"
+    networks:
+      mipt_services:
+        ipv4_address: 10.5.0.5
+    volumes:
+      - .:/usr/src/app
+
+  tg_bot:
+    container_name:  tg_bot
+    build: tg_bot
+    command: python main.py
+    networks:
+      mipt_services:
+        ipv4_address: 10.5.0.6
+
+networks:
+  mipt_services:
+    name: local_network
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 10.5.0.0/16
+         gateway: 10.5.0.1
