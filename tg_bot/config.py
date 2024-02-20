@@ -13,18 +13,14 @@ MSG_AFTER_NOT_FOUND = "Нужный сервис не найден, вы мож�
 
 MSG_ANOTHER_QUESTION = "Введите запрос"
 
-is_prod = True
 
 def load_token():
     load_dotenv()
     return os.getenv("TOKEN")
 
-def load_backend_url(prod=is_prod):
+def load_backend_url():
     load_dotenv()
-    if prod:
-        return os.getenv("BACKEND_URL_PROD")
-    else:
-        return os.getenv("BACKEND_URL_TEST")
+    return os.getenv("BACKEND_URL")
 
 
 def load_sticker_id():
