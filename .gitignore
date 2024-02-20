@@ -2,3 +2,6 @@
 *.db
 *.xlsx
 backend/
+*.ipynb
+*/__pycache__/
+*/*/__pycache__/

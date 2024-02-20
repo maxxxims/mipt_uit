@@ -8,7 +8,7 @@ GREETING_TEXT = "Здравствуйте! \nЯ Анжела. Чат-бот те
 
 GREETING_IMAGE = FSInputFile("data/greeting_image.jpg")
 
-MSG_AFTER_FIND_TOPICS = "Вот, что я нашла по Вашему запросу:"
+MSG_AFTER_FIND_TOPICS = "Вот, что я нашла по вашему запросу:"
 MSG_AFTER_NOT_FOUND = "Нужный сервис не найден, вы можете воспользоваться контактами техподдержки УИТ: helpdesk@mipt.ru, redmine.mipt.ru"
 
 MSG_ANOTHER_QUESTION = "Введите запрос"
