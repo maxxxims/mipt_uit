@@ -4,7 +4,9 @@ from aiogram.types import FSInputFile
 
 
 DEFAULT_TEXT = 'Выберите необходимый пункт'
-GREETING_TEXT = "Здравствуйте! \nЯ Анжела. Чат-бот технической поддержки УИТ. \nЧем могу помочь? Выберите нужный пункт в меню."
+GREETING_TEXT = "Выберите нужный пункт в меню."
+
+START_GREETING_TEXT = "Здравствуйте! \nЯ Анжела. Чат-бот технической поддержки УИТ. \nЧем могу помочь? Выберите нужный пункт в меню."
 
 GREETING_IMAGE = FSInputFile("data/greeting_image.jpg")
 

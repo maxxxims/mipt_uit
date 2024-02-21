@@ -40,17 +40,21 @@ def get_topics(words: list) -> list:
     kw2idx = get_kw2idx()
     # print(kw2idx)
     topics = []
+    unique_topic_names = []
     for word in words:
         topics_indexes = kw2idx[word]
         for idx in topics_indexes:
             row = df.loc[idx]
-            found_topic = {
-                'name': str(row['name']),
-                'top_kb_index': int(row['top_kb_index']),
-                'second_kb_index': int(row['second_kb_index']),
-                'third_kb_index': int(row['third_kb_index']) if pd.notnull(row['third_kb_index']) else -1
-            }
-            topics.append(found_topic)
+            name = str(row['name']) 
+            if name not in unique_topic_names:
+                unique_topic_names.append(name)
+                found_topic = {
+                    'name': name,
+                    'top_kb_index': int(row['top_kb_index']),
+                    'second_kb_index': int(row['second_kb_index']),
+                    'third_kb_index': int(row['third_kb_index']) if pd.notnull(row['third_kb_index']) else -1
+                }
+                topics.append(found_topic)
 
     return topics
 
