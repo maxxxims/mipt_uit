@@ -10,7 +10,8 @@ class ThirdLevelKB(KBTemplate):
     path_to_csv = "data/kb_third_level_oldmipt.csv"
     def make_kb(self) -> None:
         self.data = pd.read_csv(self.path_to_csv, sep=self.sep, na_values=self.na_values)
-    
+        self.data['description'] = self.data['description'].apply(lambda text: text.replace('**', '\n') if isinstance(text, str) else text)
+
     def get_kb(self, top_kb_index: int,
                      second_kb_index: int,
                      back_button: bool = True) -> list:
