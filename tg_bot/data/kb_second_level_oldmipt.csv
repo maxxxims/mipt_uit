@@ -43,9 +43,8 @@
 9;3;:desktop_computer:;Интерактивные панели;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/auditorii_s_interaktivnymi_panelyami;False;None
 9;4;:globe_with_meridians:;Электронное голосование;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/sistema_elektronnogo_golosovaniya;False;None
 9;5;:clapper_board:;Презентационное оборудование в аудитории 326ГК;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/prezentatsionnoe_oborudovanie_v_auditorii_326gk5067;False;None
-9;6;:mobile_phone:;Мобильное презентационное оборудование;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/mobilnoe_prezentatsionnoe_oborudovanie;False;None
-9;7;:video_camera:;Система видеоконференций в аудитории 310УЛК2;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/sistema_videokonferentsiy_v_auditorii_310ulk2;False;None
-9;8;:studio_microphone:;ТП аудиторий с проекционным и звуковым оборудованием;https://old.mipt.ru/it/support/tekhpodderzhka-auditoriy-s-proektsionnym-i-zvukovym-oborudovaniem;False;None
+9;6;:video_camera:;Система видеоконференций в аудитории 310УЛК2;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/sistema_videokonferentsiy_v_auditorii_310ulk2;False;None
+9;7;:studio_microphone:;ТП аудиторий с проекционным и звуковым оборудованием;https://old.mipt.ru/it/support/tekhpodderzhka-auditoriy-s-proektsionnym-i-zvukovym-oborudovaniem;False;None
 9;-1;:SOS_button:;Другой вопрос;None;False;None
 10;1;:key:;Пропуск для обучающихся и штатных сотрудников;https://old.mipt.ru/it/services/skud/poluchenie_elektronnogo_propuska_obuchayushchimisya_i_shtatnymi_sotrudnikami_mfti5430;False;None
 10;2;:old_key:;Временный пропуск;https://old.mipt.ru/it/services/skud/poluchenie_vremennogo_elektronnogo_propuska7892;False;None
