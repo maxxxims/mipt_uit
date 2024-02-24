@@ -18,7 +18,7 @@ def lemmatize(doc):
             token = token.strip()
             token = morph.normal_forms(token)[0]
             tokens.append(token)
-    if len(tokens) > 2:
+    if len(tokens) > 0:
         return tokens
     return None
 
