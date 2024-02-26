@@ -13,7 +13,10 @@ GREETING_IMAGE = FSInputFile("data/greeting_image.jpg")
 MSG_AFTER_FIND_TOPICS = "Вот, что я нашла по вашему запросу:"
 MSG_AFTER_NOT_FOUND = "Нужный сервис не найден, вы можете воспользоваться контактами техподдержки УИТ: helpdesk@mipt.ru, redmine.mipt.ru"
 
-MSG_ANOTHER_QUESTION = "Введите запрос"
+MSG_ANOTHER_QUESTION = """Если вы не нашли нужный сервис, вы можете отправить запрос мне или воспользоваться контактами техподдержки УИТ: 
+helpdesk@mipt.ru 
+redmine.mipt.ru
+"""
 
 
 def load_token():

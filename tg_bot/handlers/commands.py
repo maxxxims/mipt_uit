@@ -11,19 +11,17 @@ router = Router()
 STICKER_ID = load_sticker_id()
 
 
-@router.message(StateFilter('*'), Command("start"))
-async def cmd_start(message: Message,  state: FSMContext):
+@router.message(Command("start"))
+async def cmd_start(message: Message):
     kb = get_main_kb()
     await message.answer_sticker(STICKER_ID)
     await message.answer(text=START_GREETING_TEXT, reply_markup=kb)
-    await state.set_state(None)
 
 
-@router.message(StateFilter('*'), Command("menu"))
-async def cmd_menu(message: Message, state: FSMContext):
+@router.message(Command("menu"))
+async def cmd_menu(message: Message):
     kb = get_main_kb()
     await message.answer(text=GREETING_TEXT, reply_markup=kb)
-    await state.set_state(None)
 
 
 @router.message(Command("reload"))
