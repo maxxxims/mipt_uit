@@ -1,12 +1,13 @@
-top_kb_index;name;emoji
-1;Рабочее место и ПО;:office_building:
-2;1С (УОП, БГУ, ЗКГУ, ФПЗ, ДО, Охрана труда);:page_facing_up:
-3;Корпоративный аккаунт/почта/сервисы рассылок;:e-mail:
-4;Личный кабинет;:man_pouting_light_skin_tone:
-5;Доступ в Интернет, телефон;:antenna_bars:
-6;Сервисы для сотрудников;:gear:
-7;Сервера и виртуалки;:desktop_computer:
-8;Онлайн-оплата;:credit_card:
-9;Аудитории с проекционным и звуковым оборудованием;:video_camera:
-10;Пропуск (ЭКД);:key:
--1;Другой вопрос;:SOS_button:
+top_kb_index;name;emoji;link
+1;Телефонный справочник;:telephone_receiver:;https://mipt.ru/about/general/contacts/phones
+2;Рабочее место и ПО;:office_building:;None
+3;1С (УОП, БГУ, ЗКГУ, ФПЗ, ДО, Охрана труда);:page_facing_up:;None
+4;Корпоративный аккаунт/почта/сервисы рассылок;:e-mail:;None
+5;Личный кабинет;:man_pouting_light_skin_tone:;None
+6;Доступ в Интернет, телефон;:antenna_bars:;None
+7;Сервисы для сотрудников;:gear:;None
+8;Сервера и виртуалки;:desktop_computer:;None
+9;Онлайн-оплата;:credit_card:;None
+10;Аудитории с проекционным и звуковым оборудованием;:video_camera:;None
+11;Пропуск (ЭКД);:key:;None
+-1;Другой вопрос;:SOS_button:;None

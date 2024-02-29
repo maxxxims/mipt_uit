@@ -3,7 +3,7 @@ from typing import Union
 
 class TopLevelCallback(CallbackData, prefix="top_level"):
     top_kb_index: int
-
+    next_kb: bool = True
 
 class SecondLevelCallback(CallbackData, prefix="second_level"):
     top_kb_index: int

@@ -26,9 +26,9 @@ class ThirdLevelKB(KBTemplate):
                     [InlineKeyboardButton(text=button_text, callback_data=AnotherQuestionCallback().pack())]
                 )
                 
-            elif row['third_kb_index'] == 3 and row['second_kb_index'] == 2 and row['top_kb_index'] == 6:
+            elif row['third_kb_index'] == 3 and row['second_kb_index'] == 2 and row['top_kb_index'] == 7:
                 kb_list.append(
-                    [InlineKeyboardButton(text=button_text, callback_data=TopLevelCallback(top_kb_index=2).pack())]
+                    [InlineKeyboardButton(text=button_text, callback_data=TopLevelCallback(top_kb_index=3).pack())]
                 )
 
             else:    

@@ -1,41 +1,41 @@
 ﻿top_kb_index;second_kb_index;third_kb_index;emoji;name;link;description
-3;1;1;:man_office_worker_light_skin_tone:;Корп. аккаунт: получить и восстановить;https://old.mipt.ru/it/services/dostup_k_it_servisam/korporativnyy-akkaunt-poluchenie-i-vosstanovlenie;None
-3;1;2;:warning:;Изменить пароль от корп. сервисов;https://old.mipt.ru/it/services/dostup_k_it_servisam/smena-i-vosstanovlenie-paroley;None
-3;1;-1;:SOS_button:;Другой вопрос;;None
-3;2;1;:man_office_worker_light_skin_tone:;Корп. аккаунт @mipt.ru для сотрудников базовых кафедр, дистанционных работников;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/poluchenie_korporativnogo_pochtovogo_akkaunta_v_domene_mipt_ru_sotrudnikami_bazovykh_kafedr_i_distan;None
-3;2;2;:closed_mailbox_with_lowered_flag:;Получение почты @mipt.ru для подразделения и мероприятия ;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/sozdanie-pochtovogo-yashchika-podrazdeleniya-meropriyatiya-v-domene-mipt-ru;None
-3;2;3;:closed_mailbox_with_lowered_flag:;Получение @phystech.edu студентами, аспирантами, выпускниками;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_phystech_edu/poluchenie-pochtovogo-akkaunta-v-domene-phystech-edu-dlya-studentov;None
-3;2;4;:closed_mailbox_with_lowered_flag:;Получение @phystech.edu сотрудниками;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_phystech_edu/poluchenie-pochtovogo-akkaunta-v-domene-phystech-edu-dlya-sotrudnikov;None
-3;2;5;:closed_mailbox_with_lowered_flag:;Получение @phystech.edu для подразделения и мероприятия;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_phystech_edu/poluchenie_pochtovogo_akkaunta_v_domene_phystech_edu_dlya_podrazdeleniy_i_meropriyatiy;None
-3;2;6;:locked_with_key:;Восстановление пароля от @phystech.edu ;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_phystech_edu/vosstanovlenie-parolya-ot-pochtovogo-adresa-phystech-edu;None
-3;2;-1;:SOS_button:;Другой вопрос;;None
-3;3;1;:closed_mailbox_with_lowered_flag:;Сервис рассылок в Личном кабинете;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/servis_korporativnykh_rassylok_v_lichnom_kabinete;None
-3;3;2;:closed_mailbox_with_lowered_flag:;Группы рассылки в домене @mipt.ru;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/sozdanie-gruppy-rassylki-v-mipt-ru;None
-3;3;3;:closed_mailbox_with_lowered_flag:;Массовые рассылки на внешние адреса;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/servis_pochtovykh_rassylok_na_vneshnie_pochtovye_adresa;None
-3;3;-1;:SOS_button:;Другой вопрос;;None
-5;1;1;:antenna_bars:;Беспроводное подключение (WiFi);https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup-v-set-internet-besprovodnoe-podklyuchenie-wifi;None
-5;1;2;:globe_with_meridians:;Интернет для мероприятий;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup_v_set_internet_dlya_meropriyatiy;None
-5;1;3;:globe_showing_Europe-Africa:; Интернет через Eduroam;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup_v_set_internet_cherez_eduroam;None
-5;1;4;:globe_with_meridians:;Проводное подключение;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup-v-set-internet-provodnoe-podklyuchenie;None
-5;1;5;:antenna_bars:;Гостевой доступ - беспроводное подключение (WiFi);https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup_v_set_internet_besprovodnoe_podklyuchenie_wifi_dlya_meropriyatiy;None
-5;1;6;:laptop:;Доступ для серверов и компьютерных классов;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup-v-set-internet-dlya-servera;None
-5;1;7;:hammer_and_wrench:;Новое подключение к корпоративной сети МФТИ;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/podklyuchenie-novogo-polzovatelya-k-korporativnoy-seti-mfti-edinichnoe;None
-5;1;8;:gear:;Техподдержка сети;https://old.mipt.ru/it/support/tekhpodderzhka-seti1;None
-5;1;-1;:SOS_button:;Другой вопрос;;None
-5;2;1;:telephone:;Подключение телефонного аппарата;https://old.mipt.ru/it/services/prezentatsionnoe_obrudovanie_i_telefoniya/podklyuchenie-perenastroyka-telefonnogo-apparata;None
-5;2;2;:telephone_receiver:;Подключение городского телефонного номера;https://old.mipt.ru/it/services/prezentatsionnoe_obrudovanie_i_telefoniya/podklyuchenie_gorodskogo_telefonnogo_nomera;None
-5;2;3;:card_file_box:;Изменение номера в телефонном справочнике на сайте;None;Свяжитесь с техподдержкой helpdesk@mipt.ru
-5;2;-1;:SOS_button:;Другой вопрос;;None
-6;1;1;:bellhop_bell:;Вакансии МФТИ;https://hr.mipt.ru;None
-6;1;2;:memo:;Схема участия в конкурсе ППС;https://hr.mipt.ru/participation-scheme/;None
-6;1;3;:receipt:;Контакты Управления по работе с персоналом;None;Телефон +7 (495) 576 52-11 **Внутренний тел. (68-40) **hr@mipt.ru **Московская область, г. Долгопрудный, Институтский переулок, д. 7, Аудиторный корпус, 1-ый этаж, кабинет 110
-6;2;1;:man_pouting_light_skin_tone:;Личный кабинет сотрудника;profile.mipt.ru;None
-6;2;2;:man_office_worker_light_skin_tone:;Корп.аккаунт;https://old.mipt.ru/it/services/dostup_k_it_servisam/korporativnyy-akkaunt-poluchenie-i-vosstanovlenie;None
-6;2;3;:orange_book:;1С;СДЕЛАТЬ;None
-6;2;4;:bell:;HR-портал МФТИ;https://team.mipt.ru;None
-6;3;1;:open_book:;Обучение в сервисе Яндекс Телемост;https://old.mipt.ru/it/services/dostup_k_it_servisam/distantsionnoe_obuchenie_v_servise_yandeks_telemost;None
-6;3;2;:red_exclamation_mark:;Доступ к сервису проверки текста mipt.antiplagiat.ru;https://old.mipt.ru/it/services/dostup_k_it_servisam/dostup_k_servisu_proverki_teksta_na_plagiat_mipt_antiplagiat_ru;None
-6;3;3;:red_circle:;Система обращений Redmine;https://old.mipt.ru/it/support/sistema_obrashcheniy_v_tekhnicheskuyu_podderzhku_uit_redmine1;None
-6;3;-1;:SOS_button:;Другой вопрос;;None
-6;5;1;:memo:;Инструкции для сотрудников;https://team.mipt.ru/guides;None
-6;5;2;:card_file_box:;Документы по ИТ МФТИ;https://old.mipt.ru/it/documents/;None
+4;1;1;:man_office_worker_light_skin_tone:;Корп. аккаунт: получить и восстановить;https://old.mipt.ru/it/services/dostup_k_it_servisam/korporativnyy-akkaunt-poluchenie-i-vosstanovlenie;None
+4;1;2;:warning:;Изменить пароль от корп. сервисов;https://old.mipt.ru/it/services/dostup_k_it_servisam/smena-i-vosstanovlenie-paroley;None
+4;1;-1;:SOS_button:;Другой вопрос;;None
+4;2;1;:man_office_worker_light_skin_tone:;Корп. аккаунт @mipt.ru для сотрудников базовых кафедр, дистанционных работников;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/poluchenie_korporativnogo_pochtovogo_akkaunta_v_domene_mipt_ru_sotrudnikami_bazovykh_kafedr_i_distan;None
+4;2;2;:closed_mailbox_with_lowered_flag:;Получение почты @mipt.ru для подразделения и мероприятия ;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/sozdanie-pochtovogo-yashchika-podrazdeleniya-meropriyatiya-v-domene-mipt-ru;None
+4;2;3;:closed_mailbox_with_lowered_flag:;Получение @phystech.edu студентами, аспирантами, выпускниками;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_phystech_edu/poluchenie-pochtovogo-akkaunta-v-domene-phystech-edu-dlya-studentov;None
+4;2;4;:closed_mailbox_with_lowered_flag:;Получение @phystech.edu сотрудниками;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_phystech_edu/poluchenie-pochtovogo-akkaunta-v-domene-phystech-edu-dlya-sotrudnikov;None
+4;2;5;:closed_mailbox_with_lowered_flag:;Получение @phystech.edu для подразделения и мероприятия;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_phystech_edu/poluchenie_pochtovogo_akkaunta_v_domene_phystech_edu_dlya_podrazdeleniy_i_meropriyatiy;None
+4;2;6;:locked_with_key:;Восстановление пароля от @phystech.edu ;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_phystech_edu/vosstanovlenie-parolya-ot-pochtovogo-adresa-phystech-edu;None
+4;2;-1;:SOS_button:;Другой вопрос;;None
+4;3;1;:closed_mailbox_with_lowered_flag:;Сервис рассылок в Личном кабинете;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/servis_korporativnykh_rassylok_v_lichnom_kabinete;None
+4;3;2;:closed_mailbox_with_lowered_flag:;Группы рассылки в домене @mipt.ru;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/sozdanie-gruppy-rassylki-v-mipt-ru;None
+4;3;3;:closed_mailbox_with_lowered_flag:;Массовые рассылки на внешние адреса;https://old.mipt.ru/it/services/pochtovye-servisy/polucheniye_pochtovogo_akkaunta_v_domene_mipt_ru/servis_pochtovykh_rassylok_na_vneshnie_pochtovye_adresa;None
+4;3;-1;:SOS_button:;Другой вопрос;;None
+6;1;1;:antenna_bars:;Беспроводное подключение (WiFi);https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup-v-set-internet-besprovodnoe-podklyuchenie-wifi;None
+6;1;2;:globe_with_meridians:;Интернет для мероприятий;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup_v_set_internet_dlya_meropriyatiy;None
+6;1;3;:globe_showing_Europe-Africa:; Интернет через Eduroam;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup_v_set_internet_cherez_eduroam;None
+6;1;4;:globe_with_meridians:;Проводное подключение;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup-v-set-internet-provodnoe-podklyuchenie;None
+6;1;5;:antenna_bars:;Гостевой доступ - беспроводное подключение (WiFi);https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup_v_set_internet_besprovodnoe_podklyuchenie_wifi_dlya_meropriyatiy;None
+6;1;6;:laptop:;Доступ для серверов и компьютерных классов;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/dostup-v-set-internet-dlya-servera;None
+6;1;7;:hammer_and_wrench:;Новое подключение к корпоративной сети МФТИ;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/podklyuchenie-novogo-polzovatelya-k-korporativnoy-seti-mfti-edinichnoe;None
+6;1;8;:gear:;Техподдержка сети;https://old.mipt.ru/it/support/tekhpodderzhka-seti1;None
+6;1;-1;:SOS_button:;Другой вопрос;;None
+6;2;1;:telephone:;Подключение телефонного аппарата;https://old.mipt.ru/it/services/prezentatsionnoe_obrudovanie_i_telefoniya/podklyuchenie-perenastroyka-telefonnogo-apparata;None
+6;2;2;:telephone_receiver:;Подключение городского телефонного номера;https://old.mipt.ru/it/services/prezentatsionnoe_obrudovanie_i_telefoniya/podklyuchenie_gorodskogo_telefonnogo_nomera;None
+6;2;3;:card_file_box:;Изменение номера в телефонном справочнике на сайте;None;Свяжитесь с техподдержкой helpdesk@mipt.ru
+6;2;-1;:SOS_button:;Другой вопрос;;None
+7;1;1;:bellhop_bell:;Вакансии МФТИ;https://hr.mipt.ru;None
+7;1;2;:memo:;Схема участия в конкурсе ППС;https://hr.mipt.ru/participation-scheme/;None
+7;1;3;:receipt:;Контакты Управления по работе с персоналом;None;Телефон +7 (495) 576 52-11 **Внутренний тел. (68-40) **hr@mipt.ru **Московская область, г. Долгопрудный, Институтский переулок, д. 7, Аудиторный корпус, 1-ый этаж, кабинет 110
+7;2;1;:man_pouting_light_skin_tone:;Личный кабинет сотрудника;profile.mipt.ru;None
+7;2;2;:man_office_worker_light_skin_tone:;Корп.аккаунт;https://old.mipt.ru/it/services/dostup_k_it_servisam/korporativnyy-akkaunt-poluchenie-i-vosstanovlenie;None
+7;2;3;:orange_book:;1С;СДЕЛАТЬ;None
+7;2;4;:bell:;HR-портал МФТИ;https://team.mipt.ru;None
+7;3;1;:open_book:;Обучение в сервисе Яндекс Телемост;https://old.mipt.ru/it/services/dostup_k_it_servisam/distantsionnoe_obuchenie_v_servise_yandeks_telemost;None
+7;3;2;:red_exclamation_mark:;Доступ к сервису проверки текста mipt.antiplagiat.ru;https://old.mipt.ru/it/services/dostup_k_it_servisam/dostup_k_servisu_proverki_teksta_na_plagiat_mipt_antiplagiat_ru;None
+7;3;3;:red_circle:;Система обращений Redmine;https://old.mipt.ru/it/support/sistema_obrashcheniy_v_tekhnicheskuyu_podderzhku_uit_redmine1;None
+7;3;-1;:SOS_button:;Другой вопрос;;None
+7;5;1;:memo:;Инструкции для сотрудников;https://team.mipt.ru/guides;None
+7;5;2;:card_file_box:;Документы по ИТ МФТИ;https://old.mipt.ru/it/documents/;None

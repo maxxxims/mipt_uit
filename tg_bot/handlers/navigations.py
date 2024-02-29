@@ -1,7 +1,7 @@
 from aiogram import Router, F
 from aiogram.types import Message, ReplyKeyboardRemove, CallbackQuery, FSInputFile
 from keyboards import get_main_kb, get_second_level_kb, get_third_level_links, get_third_level_kb, \
-                      get_fourth_level_links
+                      get_fourth_level_links, get_link_from_top_kb
 from callbacks import TopLevelCallback, BackButtonCallback, SecondLevelCallback, AnotherQuestionCallback, \
                       ThirdLevelCallback
 from utils import another_question, ANOTHER_QUESTION_INDEX
@@ -16,7 +16,7 @@ router = Router()
 
 
 
-@router.callback_query(StateFilter('*'), TopLevelCallback.filter())
+@router.callback_query(StateFilter('*'), TopLevelCallback.filter(F.next_kb == True))
 async def top_level_callback(query: CallbackQuery,  state: FSMContext, callback_data: TopLevelCallback):
     kb = get_second_level_kb(callback_data.top_kb_index)
     try:    await query.message.delete()
@@ -24,6 +24,13 @@ async def top_level_callback(query: CallbackQuery,  state: FSMContext, callback_
     await query.message.answer(text=DEFAULT_TEXT, 
                                 reply_markup=kb)
     
+
+@router.callback_query(StateFilter('*'), TopLevelCallback.filter(F.next_kb == False))
+async def top_level_callback_links(query: CallbackQuery,  state: FSMContext, callback_data: TopLevelCallback):
+    link_text = get_link_from_top_kb(callback_data.top_kb_index)
+    await query.message.answer(text=link_text)
+    await query.answer()
+
 
 @router.callback_query(StateFilter('*'), SecondLevelCallback.filter(F.next_kb == True))
 async def second_level_callback_kb(query: CallbackQuery, state: FSMContext, callback_data: SecondLevelCallback):
