@@ -95,7 +95,7 @@
             <thead>
               <tr>
                 <th scope="col" style="text-align: center;">ID</th>
-                <th scope="col" width="15%" style="text-align: center;">Время запроса</th>
+                <th scope="col" width="15%" style="text-align: center;">Дата запроса</th>
                 <th scope="col" width="80%" style="text-align: center;">Текст запроса</th>
               </tr>
             </thead>
@@ -104,7 +104,8 @@
                 {% for i in range(requests_list|length) %}
                 <tr>
                     <th scope="row" style="text-align: center;">{{requests_list[i]['id']}}</th>
-                    <td style="text-align: center;">{{requests_list[i]['date']}}</td>
+                    <!-- <td style="text-align: center;">{{requests_list[i]['date']}}</td> -->
+                    <td style="text-align: center;">{{requests_list[i]['date'].strftime('%d.%m.%Y    %H:%M')}}</td>
                     <td>{{requests_list[i]['text']}}</td>
                 </tr>
                 {% endfor %}

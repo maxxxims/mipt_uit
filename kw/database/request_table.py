@@ -14,7 +14,7 @@ async def add_request(text: str):
 
 async def get_all_requests():
     async with async_session() as session:
-        request = (await session.execute(select(Request))).scalars().all()
+        request = (await session.execute(select(Request).order_by(Request.date.desc()))).scalars().all()
         return request
     
 
