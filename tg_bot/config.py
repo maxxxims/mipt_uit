@@ -18,6 +18,7 @@ helpdesk@mipt.ru
 redmine.mipt.ru
 """
 
+DEFAULT_SECRET = 'KEEP_IT_SECRET_KEEP_IT_SAFE'
 
 def load_token():
     load_dotenv()
@@ -31,3 +32,8 @@ def load_backend_url():
 def load_sticker_id():
     load_dotenv()
     return os.getenv("STICKER_ID")
+
+    
+def load_private_key():
+    load_dotenv()
+    return os.getenv('PRIVATE_KEY', DEFAULT_SECRET)

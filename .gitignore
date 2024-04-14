@@ -6,3 +6,4 @@ backend/
 **/__pycache__/
 *.pyc
 **.ipynb
+token.txt

@@ -22,7 +22,8 @@ services:
       mipt_services:
         ipv4_address: 10.5.0.6
     restart:  unless-stopped
-
+    depends_on:
+     - api_service 
 
 networks:
   mipt_services:

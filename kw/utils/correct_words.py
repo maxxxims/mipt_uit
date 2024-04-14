@@ -4,6 +4,10 @@ from sanic import Sanic
 class CorrectorParams:
     def __init__(self, add_first: bool = False,
                   replace_mistakes: bool = True):
+        """
+            add_first - replace first variant of mistakes
+            replace_mistakes: replace mistakes or leave them in text
+        """
         self.add_first = add_first
         self.replace_mistakes = replace_mistakes
 
@@ -49,7 +53,6 @@ async def correct_gramma_in_words(app: Sanic, words: str, params: CorrectorParam
         else:
             print('HERE!')
             for word in word_list.get('s'):
-                #print(f'{word}')
                 words += f' {word}'
 
         if params.replace_mistakes :  #and len(word_list.get('word', '')) > 0

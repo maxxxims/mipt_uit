@@ -1,6 +1,7 @@
 from .preprocessing import lemmatize
 from collections import defaultdict 
 import pandas as pd
+from sanic import Sanic
 
 
 def proccess_kw(words: str):
@@ -15,12 +16,10 @@ def proccess_kw(words: str):
     return words_arr
 
 
-df = pd.read_excel('kw/data/keywords.xlsx')
-df['keywords'] = df['keywords'].apply(proccess_kw)
 
 
 
-def get_kw2idx() -> dict:
+def get_kw2idx(df: pd.DataFrame) -> dict:
     kw2idx = defaultdict(set)
     for idx, row in df.iterrows():
         for word in row['keywords']:
@@ -36,9 +35,7 @@ def get_kw2idx() -> dict:
 
 
 
-def get_topics(words: list) -> list:
-    kw2idx = get_kw2idx()
-    # print(kw2idx)
+def get_topics(words: list, kw2idx: dict, df: pd.DataFrame) -> list:
     topics = []
     unique_topic_names = []
     for word in words:
@@ -60,13 +57,11 @@ def get_topics(words: list) -> list:
 
 
 if __name__ == "__main__":
-    #t = get_topics(words=['мои', 'документы', 'мфти', 'мой', 'документ'])
-    #print(t)
-    #sorted_dict = sorted(t.items(), reverse=False)
-    #t2 = sorted(t, key=lambda el: -t[el])
     words=['мои', 'документы', 'мфти', 'мой', 'документ']
-    kw2idx = get_kw2idx()
-    # topics = defaultdict(int)
+    df = pd.read_excel('kw/data/keywords.xlsx')
+    df['keywords'] = df['keywords'].apply(proccess_kw)
+
+    kw2idx = get_kw2idx(df)
     topics = []
     for word in words:
         topics_indexes = kw2idx[word]
