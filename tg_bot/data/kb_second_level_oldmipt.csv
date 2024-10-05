@@ -29,6 +29,7 @@
 7;4;:red_exclamation_mark:;Впервые в МФТИ;https://mipt.ru/it/first_time/;False;None
 7;5;:high_voltage:;Полезные ссылки;None;True;None
 7;6;:page_with_curl:;Предоставление доступа к ЭДО "Контур.Диадок";https://old.mipt.ru/it/services/dostup_k_it_servisam/predostavlenie_dostupa_k_edo_kontur_diadok;False;None
+7;7;:clipboard:;Предоставление доступа к внешним ИС;https://old.mipt.ru/it/services/dostup_k_it_servisam/predostavlenie_dostupa_k_vneshnim_informatsionnym_sistemam;False;None
 8;1;:globe_with_meridians:;Виртуальный сервер;https://old.mipt.ru/it/services/servisy-tsod/vydelenie-virtualnogo-servera;False;None
 8;2;:laptop:;Физическое размещение оборудования;https://old.mipt.ru/it/services/servisy-tsod/fizicheskoe-razmeshchenie-oborudovaniya;False;None
 8;3;:left_arrow_curving_right:;Переадресация запросов с доменного имени *.old.mipt.ru;https://old.mipt.ru/it/services/servisy-tsod/pereadresatsiya_zaprosov_s_domennogo_imeni_mipt_ru_na_vneshnie_resursy;False;None
