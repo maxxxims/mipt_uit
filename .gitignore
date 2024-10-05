@@ -1,6 +1,5 @@
 .env
 *.db
-*.xlsx
 backend/
 *.ipynb
 **/__pycache__/
