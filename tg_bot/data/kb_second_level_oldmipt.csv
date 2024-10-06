@@ -54,3 +54,6 @@
 11;4;:ticket:;Пропуск для выпускников;https://old.mipt.ru/it/services/skud/poluchenie_elektronnogo_propuska_vypusknikami_mfti7045;False;None
 11;5;:hammer_and_wrench:;Выдача дубликата пропуска;https://old.mipt.ru/it/services/skud/vydacha_dublikata_elektronnogo_propuska;False;None
 11;-1;:SOS_button:;Другой вопрос;None;False;None
+12;1;:man_pouting_light_skin_tone:;Оформление на работу;None;True;None
+12;2;:man_pouting_light_skin_tone:;Для всех сотрудников;None;True;None
+12;3;:man_pouting_light_skin_tone:;Для руководителей;None;True;None

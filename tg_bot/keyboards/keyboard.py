@@ -40,3 +40,15 @@ def add_back_button(top_kb_index: int = -1) -> InlineKeyboardButton:
 
 def reload():
     ...
+    
+    
+def get_formatted_description(selection: pd.DataFrame):
+    link = selection['link'].values[0]
+    name = selection['name'].values[0]
+    smile = selection['emoji'].values[0]
+    if pd.notna(link): 
+        return TEXT_BEFORE_LINK  + f'{emoji.emojize(smile)} <a href="{link}">{name}</a> \n'
+    
+    description = selection['description'].values[0]
+    title = emoji.emojize(smile) + f" <b>{name}</b>\n\n"
+    return title + description

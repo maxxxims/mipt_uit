@@ -12,8 +12,8 @@ async def get_topics_from_keywords(text: str) -> list:
         }
         async with session.post(url=f'{URL}/keywords/check', json=json) as response:
             json = await response.json()
-            print(f'json: {json}')
-            print(f'status = {response.status}')
+            # print(f'json: {json}')
+            # print(f'status = {response.status}')
 
     if len(json.get('topics', [])) > 0:
         return json.get('topics')

@@ -1,4 +1,4 @@
-from .keyboard import KBTemplate, get_button_text, add_back_button, TEXT_BEFORE_LINK
+from .keyboard import KBTemplate, get_button_text, add_back_button, TEXT_BEFORE_LINK, get_formatted_description
 import pandas as pd
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder, InlineKeyboardMarkup
@@ -29,6 +29,11 @@ class ThirdLevelKB(KBTemplate):
             elif row['third_kb_index'] == 3 and row['second_kb_index'] == 2 and row['top_kb_index'] == 7:
                 kb_list.append(
                     [InlineKeyboardButton(text=button_text, callback_data=TopLevelCallback(top_kb_index=3).pack())]
+                )
+                
+            elif row['third_kb_index'] == 10 and row['second_kb_index'] == 2 and row['top_kb_index'] == 12:
+                kb_list.append(
+                    [InlineKeyboardButton(text=button_text, callback_data=TopLevelCallback(top_kb_index=11).pack())]
                 )
 
             else:    
@@ -62,10 +67,12 @@ def get_third_level_kb(top_kb_index: int, second_kb_index: int) -> InlineKeyboar
 
 def get_fourth_level_links(top_kb_index: int, second_kb_index: int, third_kb_index: int) -> str:
     df = third_level_kb.data
-    link = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index) & (df['third_kb_index'] == third_kb_index), 'link'].values[0]
-    name = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index) & (df['third_kb_index'] == third_kb_index), 'name'].values[0]
-    if pd.notna(link): 
-        return TEXT_BEFORE_LINK  + f'<a href="{link}">{name}</a> \n'
-    else:
-        description = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index) & (df['third_kb_index'] == third_kb_index), 'description'].values[0]
-        return description
+    selection = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index) & (df['third_kb_index'] == third_kb_index)]
+    return get_formatted_description(selection)
+    # link = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index) & (df['third_kb_index'] == third_kb_index), 'link'].values[0]
+    # name = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index) & (df['third_kb_index'] == third_kb_index), 'name'].values[0]
+    # if pd.notna(link): 
+    #     return TEXT_BEFORE_LINK  + f'<a href="{link}">{name}</a> \n'
+    # else:
+    #     description = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index) & (df['third_kb_index'] == third_kb_index), 'description'].values[0]
+    #     return description
