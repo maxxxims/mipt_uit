@@ -18,7 +18,7 @@ app.static('/static', dir_path + r'/static')
 
 
 @app.before_server_start
-async def init(_app: Sanic):
+async def init(app1: Sanic):
     await init_db()
 
     app1.ctx.__setattr__('data', "some information")
