@@ -47,3 +47,4 @@ pandas==2.0.2
 openpyxl==3.1.2
 Jinja2==3.1.2
 jmespath==1.0.1
+pyjwt

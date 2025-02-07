@@ -2,18 +2,16 @@ from sanic import Blueprint, Request, json
 from sanic_ext import openapi
 from openapi import CheckOrphographyRequest
 from utils.correct_words import correct_gramma_in_words, CorrectorParams
-from utils.preprocessing import add_limmatized_words, preprocess_request
-from utils.find_keywords import get_topics
+from utils import add_limmatized_words, preprocess_request, get_topics, protected
 from database import request_table
-
 
 
 router = Blueprint("keywords", url_prefix="/keywords")
 
 
-
 @router.post("/check")
 @openapi.body({"application/json": CheckOrphographyRequest}, required=True)
+@protected
 async def keywords(request: Request):
     r = request.json
     params = CorrectorParams(add_first=False, replace_mistakes=True)

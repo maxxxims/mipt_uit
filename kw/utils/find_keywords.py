@@ -5,6 +5,7 @@ from pprint import pprint
 from pathlib import Path
 
 
+
 def proccess_kw(words: str):
     words = words.lower()
     words = words.replace(';', '')
@@ -19,10 +20,12 @@ def proccess_kw(words: str):
 
 
 
+
 def load_keywords_df(path_to_ds: Path) -> pd.DataFrame:
     df = pd.read_excel(path_to_ds)
     df['keywords'] = df['keywords'].apply(proccess_kw)
     return df
+
 
 
 def get_kw2idx(df: pd.DataFrame) -> dict:
@@ -37,9 +40,11 @@ def get_kw2idx(df: pd.DataFrame) -> dict:
 
 
 
+
 def get_topics(words: list, df: pd.DataFrame, kw2idx: dict) -> list:
     # kw2idx = get_kw2idx()
     # pprint(kw2idx)
+
     topics = []
     unique_topic_names = []
     for word in words:
