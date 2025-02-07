@@ -1,9 +1,7 @@
 .env
 *.db
-*.xlsx
 backend/
 *.ipynb
 **/__pycache__/
 *.pyc
 **.ipynb
-token.txt

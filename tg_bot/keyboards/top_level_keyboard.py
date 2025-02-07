@@ -1,4 +1,4 @@
-from .keyboard import TEXT_BEFORE_LINK, KBTemplate, get_button_text
+from .keyboard import TEXT_BEFORE_LINK, KBTemplate, get_button_text, get_formatted_description
 import pandas as pd
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder, InlineKeyboardMarkup
@@ -10,8 +10,9 @@ class MainKB(KBTemplate):
     def make_kb(self):
         self.data = pd.read_csv(self.path_to_csv, sep=self.sep, na_values=self.na_values)
         self.kb_array = []
-
+        # print(self.data)
         for i, row in self.data.iterrows():
+            # print(row)
             button_text = get_button_text(row)
             if row['top_kb_index'] < 0:
                 self.kb_array.append([InlineKeyboardButton(text=button_text, 
@@ -39,7 +40,9 @@ def get_main_kb() -> InlineKeyboardMarkup:
 
 def get_link_from_top_kb(top_kb_index: int) -> str:
     df = main_kb.data
-    link = df.loc[(df['top_kb_index'] == top_kb_index), 'link'].values[0]
-    name = df.loc[(df['top_kb_index'] == top_kb_index), 'name'].values[0]
-    #if pd.notna(link):
-    return TEXT_BEFORE_LINK  + f'<a href="{link}">{name}</a> \n'
+    selection = df.loc[(df['top_kb_index'] == top_kb_index)]
+    return get_formatted_description(selection)
+    # link = df.loc[(df['top_kb_index'] == top_kb_index), 'link'].values[0]
+    # name = df.loc[(df['top_kb_index'] == top_kb_index), 'name'].values[0]
+    # #if pd.notna(link):
+    # return TEXT_BEFORE_LINK  + f'<a href="{link}">{name}</a> \n'

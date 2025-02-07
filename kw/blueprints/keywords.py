@@ -19,7 +19,7 @@ async def keywords(request: Request):
     prepocessed_text = preprocess_request(r.get('text'))
     corrected_text = await correct_gramma_in_words(request.app, prepocessed_text, params=params)
     lemmatized_text = add_limmatized_words(corrected_text)
-    topics = get_topics(lemmatized_text.split(), kw2idx=request.app.ctx.kw2idx, df=request.app.ctx.df)
+    topics = get_topics(lemmatized_text.split(), df=request.app.ctx.df, kw2idx=request.app.ctx.kw2idx)
 
     return json({
         'prepocessed_text': prepocessed_text,

@@ -21,7 +21,9 @@ async def cmd_start(message: Message):
 @router.message(Command("menu"))
 async def cmd_menu(message: Message):
     kb = get_main_kb()
-    await message.answer(text=GREETING_TEXT, reply_markup=kb)
+    await message.answer_sticker(STICKER_ID)
+    await message.answer(text=START_GREETING_TEXT, reply_markup=kb)
+    #await message.answer(text=GREETING_TEXT, reply_markup=kb)
 
 
 @router.message(Command("reload"))

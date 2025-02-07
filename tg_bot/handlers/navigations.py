@@ -22,13 +22,13 @@ async def top_level_callback(query: CallbackQuery,  state: FSMContext, callback_
     try:    await query.message.delete()
     except: await query.answer()
     await query.message.answer(text=DEFAULT_TEXT, 
-                                reply_markup=kb)
+                                reply_markup=kb, disable_web_page_preview=True)
     
 
 @router.callback_query(StateFilter('*'), TopLevelCallback.filter(F.next_kb == False))
 async def top_level_callback_links(query: CallbackQuery,  state: FSMContext, callback_data: TopLevelCallback):
     link_text = get_link_from_top_kb(callback_data.top_kb_index)
-    await query.message.answer(text=link_text)
+    await query.message.answer(text=link_text, disable_web_page_preview=True)
     await query.answer()
 
 
@@ -38,13 +38,17 @@ async def second_level_callback_kb(query: CallbackQuery, state: FSMContext, call
     try:    await query.message.delete()
     except: await query.answer()
     await query.message.answer(text=DEFAULT_TEXT, 
-                               reply_markup=kb)
+                               reply_markup=kb, disable_web_page_preview=True)
     
 
 @router.callback_query(StateFilter('*'), SecondLevelCallback.filter(F.next_kb == False))
 async def second_level_callback_links(query: CallbackQuery, state: FSMContext, callback_data: SecondLevelCallback):
     msg = get_third_level_links(callback_data.top_kb_index, callback_data.second_kb_index)
-    await query.message.answer(text=msg)
+    if msg.endswith('</a> \n'):
+        disable_web_page_preview = False
+    else:
+        disable_web_page_preview = True
+    await query.message.answer(text=msg, disable_web_page_preview=disable_web_page_preview)
     await query.answer()
 
 
@@ -53,7 +57,11 @@ async def second_level_callback(query: CallbackQuery, state: FSMContext, callbac
     msg = get_fourth_level_links(top_kb_index=int(callback_data.top_kb_index),
                                                                     second_kb_index=callback_data.second_kb_index,
                                                                     third_kb_index=callback_data.third_kb_index)
-    await query.message.answer(text=msg)
+    if msg.endswith('</a> \n'):
+        disable_web_page_preview = False
+    else:
+        disable_web_page_preview = True
+    await query.message.answer(text=msg, disable_web_page_preview=disable_web_page_preview)
     await query.answer()
 
 
@@ -63,7 +71,7 @@ async def back_callback_top_level(query: CallbackQuery, state: FSMContext, callb
     try:    await query.message.delete()
     except: await query.answer()
     await query.message.answer(text=GREETING_TEXT, 
-                               reply_markup=kb)###############
+                               reply_markup=kb, disable_web_page_preview=True)###############
     #photo = FSInputFile("data/greeting_image.jpg")
     #await query.message.answer_photo(photo=GREETING_IMAGE, caption=GREETING_TEXT, reply_markup=kb)
     
@@ -74,4 +82,4 @@ async def back_callback_second_level(query: CallbackQuery, state: FSMContext, ca
     try:    await query.message.delete()
     except: await query.answer()
     await query.message.answer(text=DEFAULT_TEXT, 
-                                   reply_markup=kb)
+                                   reply_markup=kb, disable_web_page_preview=True)

@@ -1,4 +1,4 @@
-from .keyboard import KBTemplate, get_button_text, add_back_button, TEXT_BEFORE_LINK
+from .keyboard import KBTemplate, get_button_text, add_back_button, TEXT_BEFORE_LINK, get_formatted_description
 import pandas as pd
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder, InlineKeyboardMarkup
@@ -62,11 +62,13 @@ def get_second_level_kb(index: int) -> InlineKeyboardMarkup:
 
 def get_third_level_links(top_kb_index: int, second_kb_index: int) -> str:
     df = second_level_kb.data
-    link = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index), 'link'].values[0]
-    name = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index), 'name'].values[0]
-    if pd.notna(link):
-        return TEXT_BEFORE_LINK  + f'<a href="{link}">{name}</a> \n'
-    else:
-        description = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index), 'description'].values[0]
-        return description
+    selection = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index)]
+    return get_formatted_description(selection)
+    # link = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index), 'link'].values[0]
+    # name = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index), 'name'].values[0]
+    # if pd.notna(link):
+    #     return TEXT_BEFORE_LINK  + f'<a href="{link}">{name}</a> \n'
+    # else:
+    #     description = df.loc[(df['top_kb_index'] == top_kb_index) & (df['second_kb_index'] == second_kb_index), 'description'].values[0]
+    #     return description
     
