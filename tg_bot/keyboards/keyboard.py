@@ -2,7 +2,7 @@ from aiogram.types import ReplyKeyboardMarkup
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder, InlineKeyboardMarkup
 from collections import defaultdict
 from callbacks import TopLevelCallback, SecondLevelCallback, BackButtonCallback, AnotherQuestionCallback, \
-                      ThirdLevelCallback
+                      ThirdLevelCallback, FeedBackCallback
 import pandas as pd
 import emoji
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardButton
@@ -52,3 +52,8 @@ def get_formatted_description(selection: pd.DataFrame):
     description = selection['description'].values[0]
     title = emoji.emojize(smile) + f" <b>{name}</b>\n\n"
     return title + description
+
+
+def get_feedback_button() -> InlineKeyboardButton: 
+    return InlineKeyboardButton(text=emoji.emojize(":SOS:")+ "Сообщение в поддержку",
+               callback_data=FeedBackCallback().pack())

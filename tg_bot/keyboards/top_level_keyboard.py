@@ -1,4 +1,4 @@
-from .keyboard import TEXT_BEFORE_LINK, KBTemplate, get_button_text, get_formatted_description
+from .keyboard import TEXT_BEFORE_LINK, KBTemplate, get_button_text, get_formatted_description, get_feedback_button
 import pandas as pd
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder, InlineKeyboardMarkup
@@ -26,6 +26,7 @@ class MainKB(KBTemplate):
                 self.kb_array.append([InlineKeyboardButton(text=button_text, 
                                callback_data=TopLevelCallback(top_kb_index=row['top_kb_index']).pack())])
 
+        self.kb_array.append([get_feedback_button()])
         self.kb = InlineKeyboardMarkup(
             inline_keyboard=self.kb_array
         )
@@ -42,7 +43,3 @@ def get_link_from_top_kb(top_kb_index: int) -> str:
     df = main_kb.data
     selection = df.loc[(df['top_kb_index'] == top_kb_index)]
     return get_formatted_description(selection)
-    # link = df.loc[(df['top_kb_index'] == top_kb_index), 'link'].values[0]
-    # name = df.loc[(df['top_kb_index'] == top_kb_index), 'name'].values[0]
-    # #if pd.notna(link):
-    # return TEXT_BEFORE_LINK  + f'<a href="{link}">{name}</a> \n'

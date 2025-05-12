@@ -10,6 +10,7 @@ router = Blueprint("keywords", url_prefix="/keywords")
 
 
 @router.post("/check")
+@openapi.secured("token")
 @openapi.body({"application/json": CheckOrphographyRequest}, required=True)
 @protected
 async def keywords(request: Request):

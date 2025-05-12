@@ -4,12 +4,15 @@ import jwt
 from sanic import text
 
 def check_token(request):
-    if not request.token:
+    # return True
+    token = request.headers.get("authorization", False)
+    if len(token.split(" ")[1]) < 2:
         return False
-
+    token = token.split(" ")[1]
+    
     try:
         data = jwt.decode(
-            request.token, request.app.config.SECRET, algorithms=["HS256"]
+            token, request.app.config.SECRET, algorithms=["HS256"]
         )
         if data.get('login') == 'True':     return True
     except jwt.exceptions.InvalidTokenError:

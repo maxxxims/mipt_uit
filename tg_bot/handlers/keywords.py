@@ -40,8 +40,8 @@ async def close_topics(query: CallbackQuery, callback_data: CloseRecommendationK
 
 
 
-@router.message(F.text)
-async def find_topics_by_kw(message: Message):
+@router.message(StateFilter(None),F.text)
+async def find_topics_by_kw(message: Message, state: FSMContext,):
     if message.text is None:
         return
     if message.text.startswith('/'):

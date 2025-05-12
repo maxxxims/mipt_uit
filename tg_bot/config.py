@@ -20,6 +20,12 @@ redmine.mipt.ru
 
 DEFAULT_SECRET = 'KEEP_IT_SECRET_KEEP_IT_SAFE'
 
+FEEDBACK_MSG_1 = """Чтобы отправить отзыв, введите команду /feedback и напишите ваш отзыв:"""
+FEEDBACK_MSG_2 = """Отправьте почту, на которую необходимо будет отправить ответ от техподдержки"""
+FEEDBACK_MSG_3 = """Ваш запрос передан в техподдержку!"""
+FEEDBACK_MSG_END = """Вы прекратили заполнение формы"""
+
+
 def load_token():
     load_dotenv()
     return os.getenv("TOKEN")

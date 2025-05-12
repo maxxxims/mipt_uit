@@ -10,7 +10,6 @@ class SecondLevelKB(KBTemplate):
     path_to_csv = "data/kb_second_level_oldmipt.csv"
     def make_kb(self, back_button: bool = True) -> None:
         self.data = pd.read_csv(self.path_to_csv, sep=self.sep, na_values=self.na_values)
-        #keyboards_number = self.data['top_kb_index'].max() #len(self.data['top_kb_index'].unique())
         self.index_to_keyboard = defaultdict(list)
 
         for i in self.data['top_kb_index'].unique():
