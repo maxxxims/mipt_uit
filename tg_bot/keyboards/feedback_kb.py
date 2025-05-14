@@ -8,7 +8,7 @@ from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardButton
 
 def get_close_feedback_button() -> InlineKeyboardMarkup: 
     return InlineKeyboardMarkup(
-            inline_keyboard=[[InlineKeyboardButton(text=emoji.emojize(":SOS:")+ "Сообщение в поддержку",
+            inline_keyboard=[[InlineKeyboardButton(text=emoji.emojize(":cross_mark:")+ "Закрыть",
                callback_data=CloseFeedBackCallback().pack())]]
         )
      

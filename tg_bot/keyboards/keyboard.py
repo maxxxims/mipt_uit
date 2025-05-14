@@ -55,5 +55,8 @@ def get_formatted_description(selection: pd.DataFrame):
 
 
 def get_feedback_button() -> InlineKeyboardButton: 
-    return InlineKeyboardButton(text=emoji.emojize(":SOS:")+ "Сообщение в поддержку",
+    btn = InlineKeyboardButton(text="Написать в техподдержку",
                callback_data=FeedBackCallback().pack())
+    return InlineKeyboardMarkup(
+        inline_keyboard=[[btn]]
+    )

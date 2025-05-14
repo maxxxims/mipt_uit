@@ -14,6 +14,8 @@ def another_question():
 
 
 def validate_email(email: str) -> bool:
+    if len(email) == 0 or len(email) > 100:
+        return False
     if re.match(pattern, email) is not None:
         return True
     return False

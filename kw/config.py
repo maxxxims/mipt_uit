@@ -1,7 +1,6 @@
 from dotenv import load_dotenv
 import os
 
-
 LINK_TO_YANDEX_SPELLER = 'http://speller.yandex.net/services/spellservice.json/checkText'
 DEFAULT_PORT = 7000
 DEFAULT_HOST = '0.0.0.0'
@@ -9,8 +8,8 @@ DEFAULT_SECRET = 'KEEP_IT_SECRET_KEEP_IT_SAFE'
 
 MESSAGE_AFTER_USER_TEXT = """
 
+Время обращения: {date}
 Почта для обратной связи: {user_email}
-
 ================================================
 
 ДАННОЕ СООБЩЕНИЕ АВТОМАТИЧЕСКИ СГЕНЕРИРОВАННО ПО ЗАПРОСУ ПОЛЬЗОВАТЕЛЯ. НЕ НУЖНО ОТВЕЧАТЬ НА ЭТО СООБЩЕНИЕ, ОТПРАВЬТЕ ОТВЕТ НА ПОЧТУ ПОЛЬЗОВАТЕЛЯ: {user_email}

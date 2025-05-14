@@ -12,6 +12,9 @@ from utils import validate_email
 from fsm import FeedBack
 from config import  FEEDBACK_MSG_1, FEEDBACK_MSG_2, FEEDBACK_MSG_3, FEEDBACK_MSG_END
 from keyboards import get_close_feedback_button
+from utils import send_feedback_email
+import logging
+from aiogram.utils.chat_action import ChatActionSender
 
 router = Router()
 
@@ -21,25 +24,30 @@ async def feedback_callback(query: CallbackQuery, state: FSMContext, callback_da
     kb = get_close_feedback_button()
     await query.message.answer(text=FEEDBACK_MSG_1, reply_markup=kb)
     await query.answer()
-    await state.set_state(FeedBack.writing_feedback)
-
-
-
-@router.message(StateFilter(FeedBack.writing_feedback), F.text)
-async def feedback_callback(message: Message, state: FSMContext):
-    kb = get_close_feedback_button()
-    await message.answer(text=FEEDBACK_MSG_2, reply_markup=kb)
     await state.set_state(FeedBack.writing_email)
 
 
 @router.message(StateFilter(FeedBack.writing_email), F.text)
 async def feedback_callback(message: Message, state: FSMContext):
-    if validate_email(message.text):
-        await message.answer(text=FEEDBACK_MSG_3)
-        await state.set_state(None)
+    email = message.text
+    if validate_email(email):
+        await message.answer(text=FEEDBACK_MSG_2)
+        await state.set_state(FeedBack.writing_feedback)
+        await state.update_data(email=email)
     else:
-        await message.answer(text='Некорректный email, введите ещё раз')
+        kb = get_close_feedback_button()
+        await message.answer(text='Некорректный email, введите ещё раз', reply_markup=kb)
 
+
+@router.message(StateFilter(FeedBack.writing_feedback), F.text)
+async def feedback_callback(message: Message, state: FSMContext):
+    async with ChatActionSender.typing(bot=message.bot, chat_id=message.chat.id):
+        data = await state.get_data()
+        email = data['email']
+        result =await send_feedback_email(message.text, email)
+        logging.info(f"send msg result = {result}")
+    await message.answer(text=FEEDBACK_MSG_3)
+    await state.set_state(None)
 
 
 @router.callback_query(StateFilter('*'), CloseFeedBackCallback.filter()) # FeedBack.writing_email, FeedBack.writing_feedback

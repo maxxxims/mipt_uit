@@ -1,7 +1,7 @@
 from aiogram import Router, F, Bot
 from aiogram.filters import Command, StateFilter
 from aiogram.types import Message, CallbackQuery
-from keyboards import get_main_kb, reload
+from keyboards import get_main_kb, reload, get_feedback_button
 from config import MSG_AFTER_FIND_TOPICS, MSG_AFTER_NOT_FOUND
 from aiogram.types import FSInputFile
 from aiogram.fsm.context import FSMContext
@@ -11,6 +11,8 @@ from callbacks import AnotherQuestionCallback, CloseRecommendationKBCallback, No
 from utils import get_topics_from_keywords, get_kb_from_topics, another_question
 from fsm import Keywords
 from config import  MSG_ANOTHER_QUESTION
+import logging
+from aiogram.utils.chat_action import ChatActionSender
 
 router = Router()
 
@@ -24,8 +26,10 @@ async def another_question_callback(query: CallbackQuery, callback_data: Another
 @router.callback_query(NothingFindingCallback.filter())
 async def close_topics(query: CallbackQuery, callback_data: NothingFindingCallback):
     await query.answer()
+    kb = get_feedback_button()
     await query.message.answer(
         text=MSG_AFTER_NOT_FOUND,
+        reply_markup=kb
     )
     try:    await query.message.delete()
     except: ...
@@ -45,21 +49,22 @@ async def find_topics_by_kw(message: Message, state: FSMContext,):
     if message.text is None:
         return
     if message.text.startswith('/'):
-        print('here!')
         return 
     
-    sent_msg = await message.answer('Начинаем подбор тем...')
-    
-    topics = await get_topics_from_keywords(text=message.text)
-    if topics is None:
+    async with ChatActionSender.typing(bot=message.bot, chat_id=message.chat.id):
+        sent_msg = await message.answer('Начинаем подбор тем...')
+        
+        topics = await get_topics_from_keywords(text=message.text)
+        if topics is None:
+            await sent_msg.delete()
+            await message.answer(text=MSG_AFTER_NOT_FOUND, 
+                                reply_markup=get_feedback_button())
+            return
+        
+        kb = get_kb_from_topics(topics=topics)
         await sent_msg.delete()
-        await message.answer(text=MSG_AFTER_NOT_FOUND)
-        return
-    
-    kb = get_kb_from_topics(topics=topics)
-    await sent_msg.delete()
 
-    await message.answer(
-        text=MSG_AFTER_FIND_TOPICS,
-        reply_markup=kb
-    )
+        await message.answer(
+            text=MSG_AFTER_FIND_TOPICS,
+            reply_markup=kb
+        )

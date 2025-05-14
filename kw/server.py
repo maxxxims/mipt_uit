@@ -48,8 +48,8 @@ async def init(app1: Sanic):
     app1.ctx.__setattr__('df', df)
     app1.ctx.__setattr__('kw2idx', kw2idx)
 
-    print(config.load_email_login(), config.load_email_password())
-    print(config.load_private_key())
+    # print(config.load_email_login(), config.load_email_password())
+    # print(config.load_private_key())
     smtp = SMTP(hostname=config.load_smtp_server(), port=config.load_smtp_port(),
                 username=config.load_email_login(), password=config.load_email_password(), use_tls=True, validate_certs=False)
     app1.ctx.__setattr__('SMTP', smtp)

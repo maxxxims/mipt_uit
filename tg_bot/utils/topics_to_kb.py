@@ -7,8 +7,9 @@ from callbacks import CloseRecommendationKBCallback, NothingFindingCallback
 
 def get_first_kb(t: dict) -> InlineKeyboardButton:
     top_kb_index = t['top_kb_index']
-    kb_list = main_kb.kb_array
-    btn = kb_list[top_kb_index - 1][0]
+    # kb_list = main_kb.kb_array
+    # btn = kb_list[top_kb_index - 1][0]
+    btn = main_kb.kb_mapping[top_kb_index][0]
     return btn
 
 
@@ -32,18 +33,35 @@ def get_third_kb(t: dict) -> InlineKeyboardButton:
     return btn2
 
 
+import logging
+
+logging.basicConfig(level=logging.INFO)
 
 def get_kb_from_topics(topics: list) -> InlineKeyboardMarkup:
     kb_list = []
+    logging.info(f"TOPICS:::")
     for topic in topics:
+        logging.info((topic['top_kb_index'], topic['second_kb_index'], topic['third_kb_index'], topic['name']))
         if topic['second_kb_index'] < 0:
-            button = get_first_kb(topic)
-            kb_list.append([button])
+            try:
+                button = get_first_kb(topic)
+            except Exception as e:
+                logging.error(e)
+                button = None
+            
         elif topic['third_kb_index'] < 0:
-            button = get_second_kb(topic)
-            kb_list.append([button])
+            try:
+                button = get_second_kb(topic)
+            except Exception as e:
+                logging.error(e)
+                button = None
         elif topic['third_kb_index'] > 0:
-            button = get_third_kb(topic)
+            try:
+                button = get_third_kb(topic)
+            except Exception as e:
+                logging.error(e)
+                button = None
+        if button is not None:
             kb_list.append([button])
 
 
