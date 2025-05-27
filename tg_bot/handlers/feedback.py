@@ -31,7 +31,7 @@ async def feedback_callback(query: CallbackQuery, state: FSMContext, callback_da
 async def feedback_callback(message: Message, state: FSMContext):
     email = message.text
     if validate_email(email):
-        await message.answer(text=FEEDBACK_MSG_2)
+        await message.answer(text=FEEDBACK_MSG_2.split('.')[0] + ':')
         await state.set_state(FeedBack.writing_feedback)
         await state.update_data(email=email)
     else:
@@ -44,7 +44,7 @@ async def feedback_callback(message: Message, state: FSMContext):
     async with ChatActionSender.typing(bot=message.bot, chat_id=message.chat.id):
         data = await state.get_data()
         email = data['email']
-        result =await send_feedback_email(message.text, email)
+        result = await send_feedback_email(message.text, email)
         logging.info(f"send msg result = {result}")
     await message.answer(text=FEEDBACK_MSG_3)
     await state.set_state(None)
