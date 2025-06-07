@@ -18,9 +18,10 @@ class SecondLevelKB(KBTemplate):
             for j, row in variants.iterrows():
                 button_text = get_button_text(row)
                 if row['second_kb_index'] < 0:
-                    kb_list_at_number_i.append([InlineKeyboardButton(
-                        text=button_text, callback_data=AnotherQuestionCallback().pack()
-                    )])
+                    pass
+                    # kb_list_at_number_i.append([InlineKeyboardButton(
+                    #     text=button_text, callback_data=AnotherQuestionCallback().pack()
+                    # )])
                 else:
                     kb_list_at_number_i.append([InlineKeyboardButton(
                         text=button_text, 

@@ -3,6 +3,7 @@ import pandas as pd
 from aiogram.types import ReplyKeyboardMarkup, InlineKeyboardButton
 from aiogram.utils.keyboard import ReplyKeyboardBuilder, InlineKeyboardBuilder, InlineKeyboardMarkup
 from callbacks import *
+import emoji
 
 
 class MainKB(KBTemplate):
@@ -16,8 +17,10 @@ class MainKB(KBTemplate):
             # print(row)
             button_text = get_button_text(row)
             if row['top_kb_index'] < 0:
-                self.kb_array.append([InlineKeyboardButton(text=button_text, 
-                               callback_data=AnotherQuestionCallback().pack())])
+                self.kb_array.append([InlineKeyboardButton(text=button_text,
+                                        callback_data=FeedBackCallback().pack())])
+                # self.kb_array.append([InlineKeyboardButton(text=button_text, 
+                #                callback_data=AnotherQuestionCallback().pack())])
                 # self.kb_mapping[row['top_kb_index']] = self.kb_array[-1]
             elif pd.notna(row['link']):
                 print('NOT NULL!!!!!!!!!!!!!!!!!!!!!!!!')
