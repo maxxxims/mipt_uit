@@ -29,8 +29,6 @@
 8;1;:globe_with_meridians:;Виртуальный сервер;https://old.mipt.ru/it/services/servisy-tsod/vydelenie-virtualnogo-servera;False;None
 8;2;:laptop:;Физическое размещение оборудования;https://old.mipt.ru/it/services/servisy-tsod/fizicheskoe-razmeshchenie-oborudovaniya;False;None
 8;3;:left_arrow_curving_right:;Переадресация запросов с доменного имени *.old.mipt.ru;https://old.mipt.ru/it/services/servisy-tsod/pereadresatsiya_zaprosov_s_domennogo_imeni_mipt_ru_na_vneshnie_resursy;False;None
-8;4;:gear:;Вычислительные ресурсы ЦОД;https://old.mipt.ru/it/services/servisy-tsod/dostup-k-vichislitelnym-resursam-tsod;False;None
-8;5;:gear:;Вычислительные ресурсы ЦОД для участников «Физтех.Идея»;https://old.mipt.ru/it/services/servisy-tsod/vydelenie_vychislitelnykh_resursov_tsod_dlya_uchastnikov_akseleratsionnoy_programmy_fiztekh_ideya;False;None
 8;6;:man_technologist_medium_skin_tone:;Техподдержка центра обработки данных (ЦОД);https://old.mipt.ru/it/support/tekhpodderzhka-tsod;False;None
 8;7;:clipboard:;Домен 3-го уровня в зоне mipt.ru;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/registratsiya-domena-3-go-urovnya-v-zone-mipt-ru;False;None
 8;-1;:SOS_button:;Другой вопрос;None;False;None
