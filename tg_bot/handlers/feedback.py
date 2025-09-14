@@ -181,89 +181,10 @@ async def send_feedback_callback(query: CallbackQuery, state: FSMContext, callba
     attachments = await make_attachments(user_attachment_files, query.bot)
     result = await send_feedback_email(text=user_text, email=email, files=attachments)
     logging.info(f"send msg result = {result}")
-    # await state.set_data()
     await state.clear()
     if query.from_user.id in USERS_TEXTS.keys():
         del USERS_TEXTS[query.from_user.id]
     
-
-# @router.message(StateFilter(FeedBack.writing_feedback))
-# async def feedback_callback(message: Message, state: FSMContext):
-#     media_group_id = message.media_group_id
-
-#     attachments = []
-
-#     user_text = message.text
-#     if user_text is None:
-#         user_text = message.caption
-#     if user_text is None:
-#         user_text = ''
-
-#     # сообщение с 1 вложением максимум
-#     if media_group_id is None:
-#         async with ChatActionSender.typing(bot=message.bot, chat_id=message.chat.id):
-#             data = await state.get_data()
-#             email = data['email']
-#             attachment_file = define_file_type(message)
-#             attachments = await make_attachments([attachment_file], message.bot)
-#             result = await send_feedback_email(text=user_text, email=email, files=attachments)
-#             logging.info(f"send msg result = {result}")
-#             await state.set_state(None)
-#             await message.answer(text=FEEDBACK_MSG_3)
-#     # более 1 вложения
-#     else:
-#         is_first_file = len(MEDIA_GROUPS[media_group_id]) == 0
-#         if is_first_file:
-#             MEDIA_GROUPS[media_group_id].append(None)
-#             temp_msg = await message.answer(text='Загружаю вложения')
-#             await asyncio.sleep(15)
-#         else:
-#             attachment_file = define_file_type(message)
-#             MEDIA_GROUPS[media_group_id].append(attachment_file)
-#             return
-        
-#         attachment_file = define_file_type(message)
-#         MEDIA_GROUPS[media_group_id].append(attachment_file)
-
-#         async with ChatActionSender.typing(bot=message.bot, chat_id=message.chat.id):
-#             data = await state.get_data()
-#             email = data['email']
-#             attachments = await make_attachments(MEDIA_GROUPS[media_group_id], message.bot) 
-#             result = await send_feedback_email(text=user_text, email=email, files=attachments)
-#             logging.info(f"send msg result = {result}")
-#             await state.set_state(None)
-#             await temp_msg.delete()
-#             await message.answer(text=FEEDBACK_MSG_3)
-#             del MEDIA_GROUPS[media_group_id]
-
-    # async with ChatActionSender.typing(bot=message.bot, chat_id=message.chat.id):
-    #     data = await state.get_data()
-    #     email = data['email']
-    #     user_text = message.text
-    #     if user_text is None:
-    #         user_text = message.caption
-    #     if user_text is None:
-    #         user_text = ''
-    #     media_group_id = message.media_group_id
-    #     attachments = []
-    #     if media_group_id is None:
-    #         attachment_file = define_file_type(message)
-    #         attachments = await make_attachments([attachment_file], message.bot)
-    #     else:
-    #         is_first_file = len(MEDIA_GROUPS[media_group_id]) == 0
-    #         if is_first_file:
-    #             await asyncio.sleep(15)
-    #         else:
-    #             attachment_file = define_file_type(message)
-    #             MEDIA_GROUPS[media_group_id].append(message)
-    #             return 
-
-
-    #     result = await send_feedback_email(text=user_text, email=email, files=attachments)
-    #     logging.info(f"send msg result = {result}")
-    # await message.answer(text=FEEDBACK_MSG_3)
-    # await state.set_state(None)
-
 
 @router.callback_query(StateFilter('*'), CloseFeedBackCallback.filter()) # FeedBack.writing_email, FeedBack.writing_feedback
 async def feedback_callback(query: CallbackQuery, state: FSMContext, callback_data: FeedBackCallback):
