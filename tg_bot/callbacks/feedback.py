@@ -5,3 +5,9 @@ class FeedBackCallback(CallbackData, prefix="feedback"):
 
 class CloseFeedBackCallback(CallbackData, prefix="close_feedback"):
     ...
+
+class RefreshCallback(CallbackData, prefix="refresh"):
+    ...
+
+class FeedBackSendedCallback(CallbackData, prefix="feedback_sent"):
+    ...

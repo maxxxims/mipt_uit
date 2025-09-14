@@ -4,6 +4,7 @@ from openapi import SendEmail
 from utils.send_email import send_email
 from utils import protected
 from sanic_ext.extensions.openapi.definitions import RequestBody
+import base64
 
 router = Blueprint("email", url_prefix="/email")
 
@@ -13,7 +14,10 @@ router = Blueprint("email", url_prefix="/email")
 @openapi.body(RequestBody({"application/json": SendEmail}, required=True))
 async def keywords(request: Request):
     r = request.json
-    is_sent = await send_email(request.app, text=r.get('text'), user_email=r.get('user_email'))
+    is_sent = await send_email(request.app,
+                                text=r.get('text'),
+                                user_email=r.get('user_email'),
+                                attachments=r.get('files'))
     return json({
         'status': is_sent,
     })
