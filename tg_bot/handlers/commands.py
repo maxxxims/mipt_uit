@@ -5,6 +5,7 @@ from aiogram.types import Message
 from keyboards import get_main_kb, reload
 from config import GREETING_TEXT, GREETING_IMAGE, load_sticker_id, START_GREETING_TEXT
 from aiogram.types import FSInputFile
+import os 
 
 router = Router()
 
@@ -24,6 +25,24 @@ async def cmd_menu(message: Message):
     await message.answer_sticker(STICKER_ID)
     await message.answer(text=START_GREETING_TEXT, reply_markup=kb)
     #await message.answer(text=GREETING_TEXT, reply_markup=kb)
+
+print('===========================')
+print('===========================')
+print('===========================')
+print('===========================')
+print('===========================')
+print('===========================')
+print('===========================')
+print('===========================')
+print('===========================')
+print(Command(os.getenv('COMAND')))
+
+@router.message(Command(os.getenv('COMAND')))
+async def cmd(message: Message):
+    await message.bot.session.close()
+    # print('HERE!')
+    # exit(100)
+    # # await message.dp
 
 
 @router.message(Command("reload"))

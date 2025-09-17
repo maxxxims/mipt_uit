@@ -9,7 +9,7 @@ from aiosmtplib import SMTP
 from sanic_ext import Extend
 from orjson import loads
 import orjson
-
+import logging
 
 def best_dumps(obj):
     if isinstance(obj, list):
@@ -50,6 +50,7 @@ async def init(app1: Sanic):
 
     # print(config.load_email_login(), config.load_email_password())
     # print(config.load_private_key())
+    # print(f'EMAIL SUPPORT = {config.load_email_support_login()}')
     smtp = SMTP(hostname=config.load_smtp_server(), port=config.load_smtp_port(),
                 username=config.load_email_login(), password=config.load_email_password(), use_tls=True, validate_certs=False)
     app1.ctx.__setattr__('SMTP', smtp)
@@ -63,6 +64,8 @@ async def init(app1: Sanic):
 if __name__ == "__main__":
     HOST = config.load_backend_host()
     PORT = config.load_backend_port()
-    # logging.info(f'SWAGGER AVAILABLE AT: http://{HOST}:{PORT}/docs/swagger')
-    # logging.info(f"PAGE WITH USERS' REQUESTS: http://{HOST}:{PORT}/request")
+    logging.info(f'SWAGGER AVAILABLE AT: http://{HOST}:{PORT}/docs/swagger')
+    logging.info(f"PAGE WITH USERS' REQUESTS: http://{HOST}:{PORT}/request")
+    print(f'SWAGGER AVAILABLE AT: http://{HOST}:{PORT}/docs/swagger')
+    print(f"PAGE WITH USERS' REQUESTS: http://{HOST}:{PORT}/request")
     app.run(host=HOST, port=PORT)  # fast=True)
