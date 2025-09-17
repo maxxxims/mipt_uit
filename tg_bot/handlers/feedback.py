@@ -15,12 +15,12 @@ from keyboards import get_close_feedback_button, get_send_feedback_button
 from utils import send_feedback_email, make_attachments, define_file_type
 import logging
 from aiogram.utils.chat_action import ChatActionSender
-from collections import defaultdict
+from middlewares.feedback_middleware import USERS_TEXTS
 
 MAX_MSG_LIMIT = 10
 
 router = Router()
-USERS_TEXTS  = defaultdict(list)
+
 
 
 async def delete_sent_messages(state: FSMContext, message: Message, to_delete: bool = True):

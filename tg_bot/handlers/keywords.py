@@ -13,8 +13,10 @@ from fsm import Keywords
 from config import  MSG_ANOTHER_QUESTION
 import logging
 from aiogram.utils.chat_action import ChatActionSender
+from middlewares.feedback_middleware import CloseFeedbackMiddleware
 
 router = Router()
+router.callback_query.middleware(CloseFeedbackMiddleware())
 
 
 @router.callback_query(AnotherQuestionCallback.filter())

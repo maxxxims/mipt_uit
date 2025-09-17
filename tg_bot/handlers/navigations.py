@@ -8,10 +8,10 @@ from utils import another_question, ANOTHER_QUESTION_INDEX
 from config import GREETING_TEXT, DEFAULT_TEXT, GREETING_IMAGE
 from aiogram.filters import Command, StateFilter
 from aiogram.fsm.context import FSMContext
-
-
+from middlewares.feedback_middleware import CloseFeedbackMiddleware
 
 router = Router()
+router.callback_query.middleware(CloseFeedbackMiddleware())
 #GREETING_TEXT = """Здравствуйте! \nЭтот чат-бот поможет в поиске нужного IT-сервиса МФТИ. Пожалуйста выберите тему из списка."""
 
 

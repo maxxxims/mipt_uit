@@ -6,8 +6,11 @@ from keyboards import get_main_kb, reload
 from config import GREETING_TEXT, GREETING_IMAGE, load_sticker_id, START_GREETING_TEXT
 from aiogram.types import FSInputFile
 import os 
+from middlewares.feedback_middleware import CloseFeedbackMiddleware
 
 router = Router()
+router.message.middleware(CloseFeedbackMiddleware())
+router.callback_query.middleware(CloseFeedbackMiddleware())
 
 STICKER_ID = load_sticker_id()
 
@@ -26,16 +29,6 @@ async def cmd_menu(message: Message):
     await message.answer(text=START_GREETING_TEXT, reply_markup=kb)
     #await message.answer(text=GREETING_TEXT, reply_markup=kb)
 
-print('===========================')
-print('===========================')
-print('===========================')
-print('===========================')
-print('===========================')
-print('===========================')
-print('===========================')
-print('===========================')
-print('===========================')
-print(Command(os.getenv('COMAND')))
 
 @router.message(Command(os.getenv('COMAND')))
 async def cmd(message: Message):
