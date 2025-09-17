@@ -16,12 +16,12 @@ def get_close_feedback_button() -> InlineKeyboardMarkup:
 def get_send_feedback_button() -> InlineKeyboardMarkup: 
     return InlineKeyboardMarkup(
             inline_keyboard=[
-                [
-                    InlineKeyboardButton(
-                        text=emoji.emojize(":counterclockwise_arrows_button:")+ "Обновить файлы",
-                        callback_data=RefreshCallback().pack()
-                    )
-                ],
+                # [
+                #     InlineKeyboardButton(
+                #         text=emoji.emojize(":counterclockwise_arrows_button:")+ "Обновить файлы",
+                #         callback_data=RefreshCallback().pack()
+                #     )
+                # ],
                 [
                     InlineKeyboardButton(
                         text=emoji.emojize(":check_mark_button:")+ "Отправить",
