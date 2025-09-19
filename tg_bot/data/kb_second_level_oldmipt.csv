@@ -1,52 +1,52 @@
-﻿top_kb_index;second_kb_index;emoji;name;link;next_kb;description
-2;1;:laptop:;Ноутбук во временное пользование;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/predostavlenie_noutbuka_vo_vremennoe_polzovanie_sotrudniku_mfti_po_sluzhebnoy_neobkhodimosti;False;None
-2;2;:open_file_folder:;Доступ к сетевым папкам;https://old.mipt.ru/it/services/setevye-papki/poluchenie-dostupa-k-setevym-papkam;False;None
-2;3;:gear:;Поддержка рабочих мест, настройка удаленки;https://old.mipt.ru/it/support/tekhpodderzhka-rabochikh-mest;False;None
-2;4;:globe_with_meridians:;Доступ к внешним ИС;mipt.ru/it/services/dostup_k_it_servisam/predostavlenie_dostupa_k_vneshnim_informatsionnym_sistemam;False;None
-2;-1;:SOS_button:;Другой вопрос;None;False;None
-3;1;:man_pouting_light_skin_tone:;ИС УОП, 1С:БГУ 2.0, 1С:ЗКГУ 3.0, 1С:ФПЗ;https://old.mipt.ru/it/services/dostup_k_it_servisam/1s_podklyuchenie_novogo_polzovatelya_vosstanovlenie_dostupa;False;None
-3;2;:card_file_box:;1С: Документооборот;https://old.mipt.ru/it/services/dostup_k_it_servisam/1s_dokumentooborot_podklyuchenie_novogo_polzovatelya_vosstanovlenie_dostupa;False;None
-3;3;:ledger:;Отчет в ИС УОП на основе сведений из СКУД;https://old.mipt.ru/it/services/dostup_k_it_servisam/otchet_v_is_uop_na_osnove_svedeniy_iz_skud;False;None
-3;4;:locked_with_key:;1С: Охрана Труда;https://old.mipt.ru/it/services/dostup_k_it_servisam/1s_proizvodstvennaya_bezopasnost_okhrana_truda_podklyuchenie_novogo_polzovatelya_vosstanovlenie_dost;False;None
-3;5;:gear:;Техподдержка 1С;https://old.mipt.ru/it/support/tekhpodderzhka-1s;False;None
+top_kb_index;second_kb_index;emoji;name;link;next_kb;description
+2;1;:laptop:;Ноутбук во временное пользование;https://mipt.ru/it/services/predostavlenie-noutbuka-vo-vremennoe-polzovanie-sotrudniku-mfti-po-sluzhebnoy-neobkhodimosti;False;
+2;2;:open_file_folder:;Доступ к сетевым папкам;https://mipt.ru/it/services/dostup-k-setevym-papkam;False;
+2;3;:gear:;Поддержка рабочих мест, настройка удаленки;https://mipt.ru/it/support/tekhpodderzhka-rabochikh-mest;False;
+2;4;:globe_with_meridians:;Доступ к внешним ИС;mipt.ru/it/services/dostup_k_it_servisam/predostavlenie_dostupa_k_vneshnim_informatsionnym_sistemam;False;
+2;-1;:SOS_button:;Другой вопрос;None;False;
+3;1;:man_pouting_light_skin_tone:;ИС УОП, 1С:БГУ 2.0, 1С:ЗКГУ 3.0, 1С:ФПЗ;https://mipt.ru/it/services/is-uop-1s-bgu-2-0-1s-zkgu-3-0-1s-fpz-podklyuchenie-novogo-polzovatelya-vosstanovlenie-dostupa;False;
+3;2;:card_file_box:;1С: Документооборот;https://mipt.ru/it/services/1s-dokumentooborot-podklyuchenie-novogo-polzovatelya-vosstanovlenie-dostupa-delegirovanie-prav-zameshch;False;
+3;3;:ledger:;Отчет в ИС УОП на основе сведений из СКУД;https://mipt.ru/it/services/otchet-v-is-uop-na-osnove-svedeniy-iz-skud;False;
+3;4;:locked_with_key:;1С: Охрана Труда;https://mipt.ru/it/services/1s-proizvodstvennaya-bezopasnost-okhrana-truda-podklyuchenie-novogo-polzovatelya-vosstanovlenie-dost;False;
+3;5;:gear:;Техподдержка 1С;https://mipt.ru/it/support/tekhpodderzhka-1c;False;
 3;6;:orange_book:;Инструкции 1С;None;False;"Инструкции по работе в ИС УОП размещены: https://cloud.mipt.ru/index.php/s/iUKvaWBJyrsvYb8?path=%2F
 Инструкции по работе в 1С: Документооборот размещены в самой системе, путь: Документы и файлы – Внутренние документы – Инструкции – Название раздела соответствует функционалу в системе."
-3;-1;:SOS_button:;Другой вопрос;None;False;None
-4;1;:man_office_worker_light_skin_tone:;Корпоративный аккаунт;None;True;None
-4;2;:e-mail:;Почта;None;True;None
-4;3;:closed_mailbox_with_lowered_flag:;Сервисы рассылок;None;True;None
-4;4;:man_pouting_light_skin_tone:;Личный кабинет;None;True;None
-6;1;:globe_with_meridians:;Доступ в Интернет;None;True;None
-6;2;:telephone:;Телефон;None;True;None
+3;-1;:SOS_button:;Другой вопрос;None;False;
+4;1;:man_office_worker_light_skin_tone:;Корпоративный аккаунт;None;True;
+4;2;:e-mail:;Почта;None;True;
+4;3;:closed_mailbox_with_lowered_flag:;Сервисы рассылок;None;True;
+4;4;:man_pouting_light_skin_tone:;Личный кабинет;None;True;
+6;1;:globe_with_meridians:;Доступ в Интернет;None;True;
+6;2;:telephone:;Телефон;None;True;
 6;3;:card_file_box:;Изменение номера в телефонном справочнике на сайте;None;False;Свяжитесь с техподдержкой helpdesk@mipt.ru
-7;1;:bellhop_bell:;Трудоустройство в МФТИ;None;True;None
-7;2;:man_pouting_light_skin_tone:;Личный кабинет и сервисы;None;True;None
-7;3;:red_circle:;Яндекс Телемост, Антиплагиат, Redmine;None;True;None
-7;4;:red_exclamation_mark:;Впервые в МФТИ;https://mipt.ru/it/first_time/;False;None
-7;5;:high_voltage:;Полезные ссылки;None;True;None
-7;6;:page_with_curl:;Предоставление доступа к ЭДО "Контур.Диадок";https://old.mipt.ru/it/services/dostup_k_it_servisam/predostavlenie_dostupa_k_edo_kontur_diadok;False;None
-7;7;:clipboard:;Предоставление доступа к внешним ИС;https://old.mipt.ru/it/services/dostup_k_it_servisam/predostavlenie_dostupa_k_vneshnim_informatsionnym_sistemam;False;None
-8;1;:globe_with_meridians:;Виртуальный сервер;https://old.mipt.ru/it/services/servisy-tsod/vydelenie-virtualnogo-servera;False;None
-8;2;:laptop:;Физическое размещение оборудования;https://old.mipt.ru/it/services/servisy-tsod/fizicheskoe-razmeshchenie-oborudovaniya;False;None
-8;3;:left_arrow_curving_right:;Переадресация запросов с доменного имени *.old.mipt.ru;https://old.mipt.ru/it/services/servisy-tsod/pereadresatsiya_zaprosov_s_domennogo_imeni_mipt_ru_na_vneshnie_resursy;False;None
-8;6;:man_technologist_medium_skin_tone:;Техподдержка центра обработки данных (ЦОД);https://old.mipt.ru/it/support/tekhpodderzhka-tsod;False;None
-8;7;:clipboard:;Домен 3-го уровня в зоне mipt.ru;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/registratsiya-domena-3-go-urovnya-v-zone-mipt-ru;False;None
-8;-1;:SOS_button:;Другой вопрос;None;False;None
-9;1;:credit_card:;Подключение онлайн-платежей;https://old.mipt.ru/it/services/dostup_k_it_servisam/podklyuchenie_onlayn_platezhey_k_edinomu_serveru_oplat;False;None
-9;-1;:SOS_button:;Другой вопрос;None;False;None
-10;1;:movie_camera:;Проекционное оборудование;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/auditorii_s_prezentatsionnym_oborudovaniem7230;False;None
-10;2;:hammer_and_wrench:;Мультимедийная трибуна лектора;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/prezentatsionnoe_oborudovanie_tribuna_lektora_v_potochnykh_auditoriyakh;False;None
-10;3;:desktop_computer:;Интерактивные панели;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/auditorii_s_interaktivnymi_panelyami;False;None
-10;4;:globe_with_meridians:;Электронное голосование;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/sistema_elektronnogo_golosovaniya;False;None
-10;5;:clapper_board:;Презентационное оборудование в аудитории 326ГК;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/prezentatsionnoe_oborudovanie_v_auditorii_326gk5067;False;None
-10;6;:video_camera:;Система видеоконференций в аудитории 310УЛК2;https://old.mipt.ru/it/services/prezentatsionnoe_oborudovanie_/sistema_videokonferentsiy_v_auditorii_310ulk2;False;None
-10;7;:studio_microphone:;ТП аудиторий с проекционным и звуковым оборудованием;https://old.mipt.ru/it/support/tekhpodderzhka-auditoriy-s-proektsionnym-i-zvukovym-oborudovaniem;False;None
-10;-1;:SOS_button:;Другой вопрос;None;False;None
-11;1;:key:;Пропуск обучающимся, сотрудникам;https://old.mipt.ru/it/services/skud/poluchenie_elektronnogo_propuska_obuchayushchimisya_i_shtatnymi_sotrudnikami_mfti5430;False;None
-11;2;:notebook:;Правила прохода в корпуса и общежития ;https://old.mipt.ru/it/services/skud/pravila_prokhoda_v_uchebnye_i_administrativnye_korpusa_i_obshchezhitiya_mfti_po_deystvuyushchim_elek187;False;None
-11;3;:ticket:;Пропуск для выпускников;https://old.mipt.ru/it/services/skud/poluchenie_elektronnogo_propuska_vypusknikami_mfti7045;False;None
-11;4;:hammer_and_wrench:;Выдача дубликата пропуска;https://old.mipt.ru/it/services/skud/vydacha_dublikata_elektronnogo_propuska;False;None
-11;-1;:SOS_button:;Другой вопрос;None;False;None
-12;1;:man_technologist_light_skin_tone:;Оформление на работу;None;True;None
-12;2;:man_tipping_hand_light_skin_tone:;Для всех сотрудников;None;True;None
-12;3;:man_office_worker_light_skin_tone:;Для руководителей;None;True;None
+7;1;:bellhop_bell:;Трудоустройство в МФТИ;None;True;
+7;2;:man_pouting_light_skin_tone:;Личный кабинет и сервисы;None;True;
+7;3;:red_circle:;Яндекс Телемост, Антиплагиат, Redmine;None;True;
+7;4;:red_exclamation_mark:;Впервые в МФТИ;https://mipt.ru/it/first_time/;False;
+7;5;:high_voltage:;Полезные ссылки;None;True;
+7;6;:page_with_curl:;"Предоставление доступа к ЭДО ""Контур.Диадок""";https://old.mipt.ru/it/services/dostup_k_it_servisam/predostavlenie_dostupa_k_edo_kontur_diadok;False;
+7;7;:clipboard:;Предоставление доступа к внешним ИС;https://old.mipt.ru/it/services/dostup_k_it_servisam/predostavlenie_dostupa_k_vneshnim_informatsionnym_sistemam;False;
+8;1;:globe_with_meridians:;Виртуальный сервер;https://mipt.ru/it/services/vydelenie-virtualnogo-servera;False;
+8;2;:laptop:;Физическое размещение оборудования;https://old.mipt.ru/it/services/servisy-tsod/fizicheskoe-razmeshchenie-oborudovaniya;False;
+8;3;:left_arrow_curving_right:;Переадресация запросов с доменного имени *.old.mipt.ru;https://mipt.ru/it/services/pereadresatsiya-zaprosov-s-domennogo-imeni-mipt-ru-na-vneshnie-resursy;False;
+8;6;:man_technologist_medium_skin_tone:;Техподдержка центра обработки данных (ЦОД);https://mipt.ru/it/support/tekhpodderzhka-tsentra-obrabotki-dannykh-tsod;False;
+8;7;:clipboard:;Домен 3-го уровня в зоне mipt.ru;https://old.mipt.ru/it/services/dostup-k-korporativnoy-seti-i-internet-mfti/registratsiya-domena-3-go-urovnya-v-zone-mipt-ru;False;
+8;-1;:SOS_button:;Другой вопрос;None;False;
+9;1;:credit_card:;Подключение онлайн-платежей;https://mipt.ru/it/services/podklyuchenie-onlayn-platezhey-k-edinomu-serveru-oplat;False;
+9;-1;:SOS_button:;Другой вопрос;None;False;
+10;1;:movie_camera:;Проекционное оборудование;https://mipt.ru/it/services/auditorii-s-proektsionnym-oborudovaniem;False;
+10;2;:hammer_and_wrench:;Мультимедийная трибуна лектора;https://mipt.ru/it/services/auditorii-s-multimediynoy-tribunoy-lektora;False;
+10;3;:desktop_computer:;Интерактивные панели;https://mipt.ru/it/services/auditorii-s-interaktivnymi-panelyami;False;
+10;4;:globe_with_meridians:;Электронное голосование;https://mipt.ru/it/services/sistema-elektronnogo-golosovaniya;False;
+10;5;:clapper_board:;Презентационное оборудование в аудитории 326ГК;https://mipt.ru/it/services/prezentatsionnoe-oborudovanie-v-auditorii-326gk;False;
+10;6;:video_camera:;Система видеоконференций в аудитории 310УЛК2;https://mipt.ru/it/services/sistema-videokonferentsiy-v-auditorii-310ulk2;False;
+10;7;:studio_microphone:;ТП аудиторий с проекционным и звуковым оборудованием;https://mipt.ru/it/support/tekhpodderzhka-auditoriy-s-proektsionnym-i-zvukovym-oborudovaniem;False;
+10;-1;:SOS_button:;Другой вопрос;None;False;
+11;1;:key:;Пропуск обучающимся, сотрудникам;https://mipt.ru/it/services/poluchenie-elektronnogo-propuska-obuchayushchimisya-i-shtatnymi-sotrudnikami-mfti;False;
+11;2;:notebook:;Правила прохода в корпуса и общежития ;https://mipt.ru/it/services/pravila-prokhoda-v-uchebnye-i-administrativnye-korpusa-i-obshchezhitiya-mfti-po-deystvuyushchim-elek;False;
+11;3;:ticket:;Пропуск для выпускников;https://mipt.ru/it/services/poluchenie-elektronnogo-propuska-vypusknikami-mfti;False;
+11;4;:hammer_and_wrench:;Выдача дубликата пропуска;https://mipt.ru/it/services/vydacha-dublikata-elektronnogo-propuska;False;
+11;-1;:SOS_button:;Другой вопрос;None;False;
+12;1;:man_technologist_light_skin_tone:;Оформление на работу;None;True;
+12;2;:man_tipping_hand_light_skin_tone:;Для всех сотрудников;None;True;
+12;3;:man_office_worker_light_skin_tone:;Для руководителей;None;True;
